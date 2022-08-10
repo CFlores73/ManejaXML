@@ -46,26 +46,27 @@ namespace ManejaXML
             }
         }
 
-        public int comprobarBalanceo(int idPerfil)
-        {
-            SqlConnection sqlConn = conexionSql();
-            int balancea = 0;
+        //NO SE UTILIZA FUNCIÓN
+        //public int comprobarBalanceo(int idPerfil)
+        //{
+        //    SqlConnection sqlConn = conexionSql();
+        //    int balancea = 0;
 
-            using (sqlConn)
-            {
-                sqlConn.Open();
+        //    using (sqlConn)
+        //    {
+        //        sqlConn.Open();
 
-                SqlCommand cmd = new SqlCommand("SELECT PDK_BALANCEA FROM PDK_PERFIL WHERE PDK_ID_PERFIL = '" + idPerfil + "'", sqlConn);
-                SqlDataReader dr = cmd.ExecuteReader();
+        //        SqlCommand cmd = new SqlCommand("SELECT PDK_BALANCEA FROM PDK_PERFIL WHERE PDK_ID_PERFIL = '" + idPerfil + "'", sqlConn);
+        //        SqlDataReader dr = cmd.ExecuteReader();
 
-                if (dr.Read())
-                {
-                    balancea = Convert.ToInt32(dr["PDK_BALANCEA"]);
-                }
+        //        if (dr.Read())
+        //        {
+        //            balancea = Convert.ToInt32(dr["PDK_BALANCEA"]);
+        //        }
 
-                return balancea;
-            }
-        }
+        //        return balancea;
+        //    }
+        //}
     }
 }
 

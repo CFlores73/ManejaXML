@@ -131,20 +131,20 @@ namespace ManejaXML
 
                         cmd.ExecuteNonQuery();                       
                     }
-                    //Console.WriteLine("=========== ADDRESS LIST ===========");
-                    //Console.WriteLine(thirdPartyAL);
-                    //Console.WriteLine(address1);
-                    //Console.WriteLine(address2);
-                    //Console.WriteLine(addressNr);
-                    //Console.WriteLine(canton);
-                    //Console.WriteLine(countryCode);
-                    //Console.WriteLine(county);
-                    //Console.WriteLine(district);
-                    //Console.WriteLine(entryDate);
-                    //Console.WriteLine(postalCode);
-                    //Console.WriteLine(statusCode);
-                    //Console.WriteLine(town);
-                    //Console.WriteLine(typaddrCode);                    
+                    Console.WriteLine("=========== ADDRESS LIST ===========");
+                    Console.WriteLine(thirdPartyAL);
+                    Console.WriteLine(address1);
+                    Console.WriteLine(address2);
+                    Console.WriteLine(addressNr);
+                    Console.WriteLine(canton);
+                    Console.WriteLine(countryCode);
+                    Console.WriteLine(county);
+                    Console.WriteLine(district);
+                    Console.WriteLine(entryDate);
+                    Console.WriteLine(postalCode);
+                    Console.WriteLine(statusCode);
+                    Console.WriteLine(town);
+                    Console.WriteLine(typaddrCode);
                     break;
                 case ("bankAccountReferenceList"):                    
                     string thirdPartyBA = diccionario.ContainsKey("thirdParty") ? diccionario["thirdParty"] : "";
@@ -163,19 +163,19 @@ namespace ManejaXML
                     //Se agrega el thirdParty para la relación
                     if (!thirdPartyList.Contains(thirdPartyBA)) thirdPartyList.Add(thirdPartyBA);
 
-                    //Console.WriteLine("=========== BANK ACCOUNT REFERENCE LIST ===========");
-                    //Console.WriteLine(thirdPartyBA);
-                    //Console.WriteLine(bankRefNr);
-                    //Console.WriteLine(account);
-                    //Console.WriteLine(address);
-                    //Console.WriteLine(bank);
-                    //Console.WriteLine(bankRefTypeCode);
-                    //Console.WriteLine(barFormatCode);
-                    //Console.WriteLine(branch);
-                    //Console.WriteLine(countryCodeBA);
-                    //Console.WriteLine(origBankRefNr);
-                    //Console.WriteLine(statusCodeBA);
-                    //Console.WriteLine(substitutionBankRefNr);
+                    Console.WriteLine("=========== BANK ACCOUNT REFERENCE LIST ===========");
+                    Console.WriteLine(thirdPartyBA);
+                    Console.WriteLine(bankRefNr);
+                    Console.WriteLine(account);
+                    Console.WriteLine(address);
+                    Console.WriteLine(bank);
+                    Console.WriteLine(bankRefTypeCode);
+                    Console.WriteLine(barFormatCode);
+                    Console.WriteLine(branch);
+                    Console.WriteLine(countryCodeBA);
+                    Console.WriteLine(origBankRefNr);
+                    Console.WriteLine(statusCodeBA);
+                    Console.WriteLine(substitutionBankRefNr);
                     break;
                 case ("partyContactList"):
                     string thirdPartyCL = diccionario.ContainsKey("thirdParty") ? diccionario["thirdParty"] : "";
@@ -191,16 +191,16 @@ namespace ManejaXML
                     //Se agrega el thirdParty para la relación
                     if (!thirdPartyList.Contains(thirdPartyCL)) thirdPartyList.Add(thirdPartyCL);
 
-                    //Console.WriteLine("=========== PARTY CONTACT LIST ===========");
-                    //Console.WriteLine(thirdPartyCL);
-                    //Console.WriteLine(commrefId);
-                    //Console.WriteLine(email);
-                    //Console.WriteLine(forname);
-                    //Console.WriteLine(mobilePhone);
-                    //Console.WriteLine(name);
-                    //Console.WriteLine(phone);
-                    //Console.WriteLine(referenceCode);
-                    //Console.WriteLine(representative);
+                    Console.WriteLine("=========== PARTY CONTACT LIST ===========");
+                    Console.WriteLine(thirdPartyCL);
+                    Console.WriteLine(commrefId);
+                    Console.WriteLine(email);
+                    Console.WriteLine(forname);
+                    Console.WriteLine(mobilePhone);
+                    Console.WriteLine(name);
+                    Console.WriteLine(phone);
+                    Console.WriteLine(referenceCode);
+                    Console.WriteLine(representative);
                     break;
                 case ("roleList"):
                     string thirdPartyRL = diccionario.ContainsKey("thirdParty") ? diccionario["thirdParty"] : "";
@@ -215,15 +215,15 @@ namespace ManejaXML
                     //Se agrega el thirdParty para la relación
                     if (!thirdPartyList.Contains(thirdPartyRL)) thirdPartyList.Add(thirdPartyRL);
 
-                    //Console.WriteLine("=========== ROLE LIST ===========");
-                    //Console.WriteLine(thirdPartyRL);
-                    //Console.WriteLine(roleCode);
-                    //Console.WriteLine(creationDate);
-                    //Console.WriteLine(currencyCode);
-                    //Console.WriteLine(invoicingAddressNr);
-                    //Console.WriteLine(payBankRefNr);
-                    //Console.WriteLine(paymentAddressNr);
-                    //Console.WriteLine(paymentCode);
+                    Console.WriteLine("=========== ROLE LIST ===========");
+                    Console.WriteLine(thirdPartyRL);
+                    Console.WriteLine(roleCode);
+                    Console.WriteLine(creationDate);
+                    Console.WriteLine(currencyCode);
+                    Console.WriteLine(invoicingAddressNr);
+                    Console.WriteLine(payBankRefNr);
+                    Console.WriteLine(paymentAddressNr);
+                    Console.WriteLine(paymentCode);
                     break;
             }
 
