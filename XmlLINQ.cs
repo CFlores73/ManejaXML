@@ -6,7 +6,7 @@ namespace ManejaXML
 {
     class XmlLINQ
     {
-        List<string> thirdPartys = new List<string>();
+        List<string> thirdPartyList = new List<string>();
 
         public void ProcesarXML(string rutaXML)
         {
@@ -37,7 +37,7 @@ namespace ManejaXML
             procesarElemento(Xml, "roleList", roleListElements, roleListDictionary);
 
             //Se guardan las relaciones para cada thirdParty
-            foreach(string thirdParty in thirdPartys)
+            foreach(string thirdParty in thirdPartyList)
             {
                 guardarRelacion(contractIe, "qwe", thirdParty, 999);
             }            
@@ -108,7 +108,7 @@ namespace ManejaXML
                     string typaddrCode = diccionario.ContainsKey("typaddrCode") ? diccionario["typaddrCode"] : "";
 
                     //Se agrega el thirdParty para la relación
-                    if (!thirdPartys.Contains(thirdPartyAL)) thirdPartys.Add(thirdPartyAL);
+                    if (!thirdPartyList.Contains(thirdPartyAL)) thirdPartyList.Add(thirdPartyAL);
                     
                     using (sqlConn)
                     {
@@ -161,7 +161,7 @@ namespace ManejaXML
                     string substitutionBankRefNr = diccionario.ContainsKey("substitutionBankRefNr") ? diccionario["substitutionBankRefNr"] : "";
 
                     //Se agrega el thirdParty para la relación
-                    if (!thirdPartys.Contains(thirdPartyBA)) thirdPartys.Add(thirdPartyBA);
+                    if (!thirdPartyList.Contains(thirdPartyBA)) thirdPartyList.Add(thirdPartyBA);
 
                     //Console.WriteLine("=========== BANK ACCOUNT REFERENCE LIST ===========");
                     //Console.WriteLine(thirdPartyBA);
@@ -189,7 +189,7 @@ namespace ManejaXML
                     string representative = diccionario.ContainsKey("representative") ? diccionario["representative"] : "";
 
                     //Se agrega el thirdParty para la relación
-                    if (!thirdPartys.Contains(thirdPartyCL)) thirdPartys.Add(thirdPartyCL);
+                    if (!thirdPartyList.Contains(thirdPartyCL)) thirdPartyList.Add(thirdPartyCL);
 
                     //Console.WriteLine("=========== PARTY CONTACT LIST ===========");
                     //Console.WriteLine(thirdPartyCL);
@@ -213,7 +213,7 @@ namespace ManejaXML
                     string paymentCode = diccionario.ContainsKey("paymentCode") ? diccionario["paymentCode"] : "";
 
                     //Se agrega el thirdParty para la relación
-                    if (!thirdPartys.Contains(thirdPartyRL)) thirdPartys.Add(thirdPartyRL);
+                    if (!thirdPartyList.Contains(thirdPartyRL)) thirdPartyList.Add(thirdPartyRL);
 
                     //Console.WriteLine("=========== ROLE LIST ===========");
                     //Console.WriteLine(thirdPartyRL);
